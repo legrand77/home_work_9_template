@@ -1,15 +1,21 @@
 #pragma once
+#include<vector>
+#include <iostream>
+
 
 template <class T>
-void my_square(T a, T b, T c) 
+std::vector<T> my_square(std::vector<T> vec)
 {
-	std::cout << "[IN]: "<< a << ", " << b << ", " << c << std::endl;
-	std::cout <<"[OUT]: " << (a*a) << ", " << (b*b) << ", " << (c*c) << std::endl;
+	for (int i=0; i<vec.size(); i++)
+	{
+		vec[i]*=vec[i];
+	}
+	return vec;
 }
 
 template <class T>
-void my_square(T a)
+T my_square(T a)
 {
-	std::cout << "[IN]: " << a <<  std::endl;
-	std::cout << "[OUT]: " << (a * a)  << std::endl;
+	a*=a;
+	return a;
 }

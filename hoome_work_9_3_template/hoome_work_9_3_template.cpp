@@ -1,7 +1,6 @@
 ﻿#include <iostream>
 #include "Header_3.h"
 #include <vector>
-#include <algorithm>
 
 int main()
 {
@@ -9,9 +8,13 @@ int main()
 	std::cout <<"[IN]: ";
 	for (auto i : vec) { std::cout << i << " "; };
 	std::cout << std::endl;
-	std::for_each(vec.begin(), vec.end(), get_sum());
-	std::cout << std::endl;
-	std::for_each(vec.begin(), vec.end(), get_count());
-	std::cout << std::endl;
+	Counter counter;
+	for (auto i : vec)
+	{
+		counter(i);
+	}
+	std::cout << "[OUT]: get_sum() = " << counter.get_sum()<< '\n';
+	std::cout << "[OUT]: get_count() = " << counter.get_count();
+	
 	return EXIT_SUCCESS;
 }

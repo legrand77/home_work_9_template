@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Header_3.cpp" />
     <ClCompile Include="hoome_work_9_3_template.cpp" />
   </ItemGroup>
   <ItemGroup>
